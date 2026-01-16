@@ -1,3 +1,17 @@
+const socket = new WebSocket("ws://localhost:8001");
+
+socket.addEventListener("open", (event) => {
+  console.log("Połączono z serwerem!");
+  document.getElementById("status").innerText = "Połączono!";
+  document.getElementById("status").style.color = "green";
+
+  socket.send(JSON.stringify({ action: "HELLO", msg: "Cześć serwerze!" }));
+});
+
+socket.addEventListener("message", (event) => {
+  console.log("Wiadomość z serwera:", event.data);
+});
+
 const layout = [
   "JAGODA....",
   ".....E....",
