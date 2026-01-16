@@ -1,0 +1,51 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #e2b8e1;
+}
+
+h1 {
+  color: #333333;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  gap: 2px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input {
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  text-align: center;
+  border: 1px solid #cccccc;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+input:hover:not(:disabled) {
+  background-color: #1da7e7;
+}
+
+input:focus {
+  outline: none;
+  background-color: #fff;
+  border: 2px solid #007bff;
+}
+
+.black-cell {
+  background-color: black;
+  border: 1px solid rgb(53, 53, 53);
+  cursor: default;
+}
+
+.locked-remote {
+  background-color: #ffcccc;
+}
+
+.solved {
+  background-color: #ccffcc;
+}
